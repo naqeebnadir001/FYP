@@ -55,7 +55,7 @@ const LoginScreen = () => {
           effortlessly.
         </p>
         <div className="promo-image">
-          <img src="your-dashboard-image-path.png" alt="Dashboard Preview" />
+          <img src="asse.png" alt="Dashboard Preview" />
         </div>
       </div>
     </div>
