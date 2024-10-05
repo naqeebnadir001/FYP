@@ -1,15 +1,18 @@
-import Dashboard from "./Dashboard";
-import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Dashboard from './Dashboard';
+import PolicyProcessPage from './PolicyProcess';
 import Navbar from './navbar';
 
-function App() {
-
+const App = () => {
   return (
-    <div className ='container-fluid'>
+    <Router>
       <Navbar />
-      <Dashboard />
-    </div>
-  ) 
-}
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/policy-process" element={<PolicyProcessPage />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
