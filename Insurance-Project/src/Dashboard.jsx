@@ -1,5 +1,5 @@
-import React from 'react';
 import './Dashboard.css';
+import Navbar from './navbar';
 
 const Dashboard = () => {
   const options = [
@@ -11,16 +11,19 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="dashboard-container">
-      <h1 className="title">What would you like to use CRM for?</h1>
-      <div className="grid-container">
-        {options.map((option, index) => (
-          <div className="grid-item" key={index}>
-            <span className="icon">{option.icon}</span>
-            <h3>{option.title}</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          </div>
-        ))}
+    <div>
+      <Navbar /> {/* Adding the Navbar on top */}
+      <div className="dashboard-container">
+        <h1 className="title">What would you like to use CRM for?</h1>
+        <div className="grid-container">
+          {options.map((option, index) => (
+            <div className="grid-item" key={index}>
+              <span className="icon">{option.icon}</span>
+              <h3>{option.title}</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
